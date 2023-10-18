@@ -51,6 +51,8 @@ CyberChef should instantly give the reciept: `URL decode -> From Base85`. We kno
    2. `client_id 107693687310623144` appears directly in the conversation. Googling this will yield only 1 result (as of 5 July 2023) and it is the oauth2 link to invite a discord bot named BetterInvite (a popular, public bot). The main feature of this bot is to assign users different roles in the server depending on which invitation link they used to join the server. This hopefully forms the last piece of the clue.
 8. From these 3 clues, the user is expected to come up with the idea of viewing the audit log and look for instances of invite link creation. There were multiple created but most are deleted except for 2, and one of them will be the same they used to enter the server, so it should be obvious that the other one is the target. The correct link is also inviting to the `flag` channel instead of the `default` channel. Upon getting the link using the discord bot token given, they can enter the server and will automatically be assigned the `Admin` role, where they can view the flag in the `flag` channel.
 
+Solution script to enumerate the audit log and find the invite link: [solve.py](solve.py)
+
 Overall, this challenge aims to be creative and unique from typical CTF challenges that are RE/PWN heavy in nature. It tries to emulate a real-world source of data leaks and infiltration, from the unexpected github secrets leak, to the enumeration of a leaked discord token. This challenge took inspiration from various cloud challenges that leaked access tokens.
 
 ## Flag
