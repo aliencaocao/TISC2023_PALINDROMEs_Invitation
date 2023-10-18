@@ -1,4 +1,5 @@
-# PALINDROME's invitation
+# PALINDROME's Invitation
+Writeup by challenge author
 
 ## Category
 Misc, OSINT
